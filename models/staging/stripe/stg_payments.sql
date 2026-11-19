@@ -5,5 +5,4 @@ select id,
        amount/100 as dollar_amount,
        created,
        _batched_at
-from 
-dbt-tutorial.stripe.payment
+from {{source ('stripe','payment') }}
